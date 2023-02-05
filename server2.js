@@ -17,8 +17,7 @@ const posts= [
 
 
 app.get('/posts',authentication,(req,res)=>{
-console.log('hssisis');
-    res.json(posts.filter(post=>post.username===req.user.name)).sendStatus(200)
+    res.json(posts.filter(post=>post.username===req.user.name))
 })
 
 app.post('/login',(req,res)=>{
@@ -42,4 +41,4 @@ if(token == null)return res.sendStatus(401)
 }
 
 
-app.listen(3000)
+app.listen(4000)
